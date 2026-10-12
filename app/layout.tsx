@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono, DM_Sans, Lora } from "next/font/google";
+import "./globals.css"; 
+import Navbar from "./components/features/navBar";
+
+const sans = DM_Sans({
+   subsets: ["latin"], variable: "--font-ui" 
+  });
+const serif = Lora({
+   subsets: ["latin"], variable: "--font-headline" 
+  });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +29,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${sans.variable} ${serif.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
+      <Navbar />
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

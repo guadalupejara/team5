@@ -1,11 +1,11 @@
 import { Pencil, User, Clock, AlignLeft } from "lucide-react";
-import Button from "../components/basic/button";
-import Table, { Column } from "../components/basic/table";
-import Card from "../components/basic/card";
-import TextField from "../components/basic/textField";
-import EmptyState from "../components/basic/emptyState";
-import StatusBadge, { Status } from "../components/basic/statusBadge";
-import Dropdown from "../components/basic/dropdown";
+import Button from "../../components/basic/Button";
+import Table, { Column } from "../../components/basic/Table";
+import Card from "../../components/basic/Card";
+import TextField from "../../components/basic/TextField";
+import EmptyState from "../../components/basic/EmptyState";
+import StatusBadge, { Status } from "../../components/basic/StatusBadge";
+import Dropdown from "../../components/basic/Dropdown";
 import { FileText } from "lucide-react";
 
 

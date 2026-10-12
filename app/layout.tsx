@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, DM_Sans, Lora } from "next/font/google";
 import "./globals.css"; 
-import Navbar from "./components/features/navBar";
+import Navbar from "../components/features/NavBar";
 
 const sans = DM_Sans({
    subsets: ["latin"], variable: "--font-ui" 
@@ -27,12 +27,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${sans.variable} ${serif.variable} ${geistSans.variable} ${geistMono.variable}`}
-    >
-      <Navbar />
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+      <body>
+        <Navbar />
+        <main className="mx-auto max-w-5xl p-4">{children}</main>
+      </body>
     </html>
   );
 }
